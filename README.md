@@ -7,7 +7,7 @@ on Hotkey：
 
 M4:safe point
 
-M5:AUTO peek
+M5:Double tap
 
 M3:min damage =8
 
