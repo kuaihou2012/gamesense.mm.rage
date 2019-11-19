@@ -1,8 +1,10 @@
 # gamesense.mm.rage
 download：
+CFG:https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/cfg
+lua：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/adaptive_weapon_config.lua
 
-https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage
-
+lua2：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/Frees.lua
+-------------------------------------------------------------------------------------------
 on Hotkey：
 
 M4:safe point
