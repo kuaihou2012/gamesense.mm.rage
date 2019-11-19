@@ -17,4 +17,4 @@ toggle:
 
 c:body aim
 
-Z：
+Z：freestanding
