@@ -11,9 +11,10 @@ M5:Double tap
 
 M3:min damage =8
 
+caps：fake duck
 
 toggle:
 
 c:body aim
 
-caps：fake duck
+
