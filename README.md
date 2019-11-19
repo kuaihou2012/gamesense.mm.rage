@@ -7,6 +7,8 @@ lua：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaiho
 
 lua2：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/Frees.lua
 
+lua3 ：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/Override%20Damage.lua
+
 -------------------------------------------------------------------------------------------
 on Hotkey：
 
