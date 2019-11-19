@@ -15,6 +15,6 @@ caps：fake duck
 
 toggle:
 
-c:body aim
+C:body aim
 
 Z：freestanding
