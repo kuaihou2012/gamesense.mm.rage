@@ -4,14 +4,13 @@
 local enable_ref
 local config_ref
 local label_ref
--- local config_ref_visible = true
 
 -- Array of aimbot references
 -- references[IDX_BUILTIN] is an array of references to the built-in menu items
 -- references[IDX_GLOBAL] is an array of references to the global config
-local references  = {}
+local references = {}
 local IDX_BUILTIN = 1
-local IDX_GLOBAL  = 2
+local IDX_GLOBAL = 2
 
 local config_idx_to_name = {}
 local config_name_to_idx = {}
@@ -19,7 +18,7 @@ local weapon_id_to_config_idx = {}
 
 -- Active weapon config is managed by the script when the local player is alive
 -- Active weapon config is managed by the user (via the menu) while the local player is dead
-local active_config_idx = nil
+local active_config_idx
 
 local SPECATOR_TEAM_ID = 1
 
@@ -29,7 +28,7 @@ local SPECATOR_TEAM_ID = 1
 local function copy_settings(config_idx_src, config_idx_dst)
     local src_refs = references[config_idx_src]
     local dst_refs = references[config_idx_dst]
-    for i=1, #dst_refs do
+    for i = 1, #dst_refs do
         ui.set(dst_refs[i], ui.get(src_refs[i]))
     end
 end
@@ -49,7 +48,6 @@ local function update_config_visibility(state)
         display_config = entity.is_alive(entity.get_local_player()) == false
     end
     local display_label = not display_config
-    -- config_ref_visible = display_config
     ui.set_visible(config_ref, display_config and script_state)
     ui.set_visible(label_ref, display_label and script_state)
     return display_config
@@ -61,14 +59,14 @@ local function save_reference(config_idx, setting_idx, ref)
 end
 
 local function bind(func, ...)
-    local args = {...}
+    local args = { ... }
     return function(ref)
         func(ref, unpack(args))
     end
 end
 
 local function delayed_bind(func, delay, ...)
-    local args = {...}
+    local args = { ... }
     return function(ref)
         client.delay_call(delay, func, ref, unpack(args))
     end
@@ -79,6 +77,7 @@ local function temp_task()
     update_config_visibility()
     client.delay_call(5, temp_task)
 end
+
 --------------------------------------------------------------------------------
 -- Callback functions
 --------------------------------------------------------------------------------
@@ -113,7 +112,7 @@ local function on_player_team_change(e)
     end
 end
 
-local function on_game_disconnect(e)
+local function on_game_disconnect()
     update_config_visibility(true)
 end
 
@@ -136,7 +135,7 @@ end
 -- Also called when a config is loaded
 local function on_builtin_setting_change(ref, setting_idx)
     -- Propagate built-in setting changes to the adaptive settings
-    if active_config_idx ~= nil then
+    if active_config_idx ~= nil and ui.get(enable_ref) == true then
         ui.set(references[active_config_idx][setting_idx], ui.get(ref))
     end
 end
@@ -145,7 +144,7 @@ end
 -- Also called when a config is loaded
 local function on_adaptive_setting_changed(ref, config_idx, setting_idx)
     -- Propagate adaptive setting changes to the built-in settings
-    if config_idx == active_config_idx then
+    if config_idx == active_config_idx and ui.get(enable_ref) == true then
         ui.set(references[IDX_BUILTIN][setting_idx], ui.get(ref))
     end
 end
@@ -157,7 +156,7 @@ local function on_adaptive_config_toggled(ref)
     -- Update the configs visibility when the script is toggled
     update_config_visibility()
     -- Set / unset event callbacks based on the state of the script so that we aren't just invoking callbacks for no reason
-	local update_callback = script_state and client.set_event_callback or client.unset_event_callback
+    local update_callback = script_state and client.set_event_callback or client.unset_event_callback
     update_callback("setup_command", on_setup_command)
     update_callback("player_death", on_player_death)
     update_callback("player_spawn", on_player_spawn)
@@ -172,13 +171,13 @@ local function duplicate(tab, container, name, ui_func, ...)
     -- This menu item will have the same index across all weapon configs
     local setting_index = #references[IDX_BUILTIN] + 1
     -- Create hidden menu items to store values
-    for i=IDX_GLOBAL, #references do
+    for i = IDX_GLOBAL, #references do
         local config_name = config_idx_to_name[i]
         -- Create a duplicate menu item to store settings that can be copied later
         local ref = save_reference(i, setting_index, ui_func(tab, container, config_name .. " " .. name:lower(), ...))
         -- Set a default value for the target hitbox as this multiselect cannot be empty
         if name == "Target hitbox" then
-            ui.set(ref, {"Head"})
+            ui.set(ref, { "Head" })
         end
         ui.set_visible(ref, false)
         ui.set_callback(ref, bind(on_adaptive_setting_changed, i, setting_index))
@@ -194,7 +193,7 @@ local function init_config(name, ...)
     config_idx_to_name[config_idx] = name
     config_name_to_idx[name] = config_idx
     -- Populate the weapon_id_to_config_idx lookup table so we can easily get a configs index from a weapon id
-    for _, weapon_id in ipairs({...}) do
+    for _, weapon_id in ipairs({ ... }) do
         weapon_id_to_config_idx[weapon_id] = config_idx
     end
     return config_idx
@@ -202,52 +201,51 @@ end
 
 local function init()
     IDX_BUILTIN = init_config("Built-in menu items")
-	init_config("Global")
-	init_config("Auto", 11, 38)
-	init_config("Awp", 9)
-	init_config("Scout", 40)
-	init_config("Desert Eagle", 1)
-	init_config("Revolver", 64)
-	init_config("Pistol", 2, 3, 4, 30, 32, 36, 61, 63)
-	init_config("Rifle", 7, 8, 10, 13, 16, 39, 60)
-	-- init_config("Submachine gun", 17, 19, 23, 24, 26, 33, 34)
-	-- init_config("Machine gun", 14, 28)
+    init_config("Global")
+    init_config("Auto", 11, 38)
+    init_config("Awp", 9)
+    init_config("Scout", 40)
+    init_config("Desert Eagle", 1)
+    init_config("Revolver", 64)
+    init_config("Pistol", 2, 3, 4, 30, 32, 36, 61, 63)
+    init_config("Rifle", 7, 8, 10, 13, 16, 39, 60)
+    -- init_config("Submachine gun", 17, 19, 23, 24, 26, 33, 34)
+    -- init_config("Machine gun", 14, 28)
     -- init_config("Shotgun", 25, 27, 29, 35)
-    
+
     assert(config_idx_to_name[IDX_GLOBAL] == "Global")
 
     enable_ref = ui.new_checkbox("RAGE", "Other", "Adaptive config")
     config_ref = ui.new_combobox("RAGE", "Other", "\nAdaptive config", config_idx_to_name)
     label_ref = ui.new_label("RAGE", "Other", "Active weapon config: " .. ui.get(config_ref))
-    
+
     duplicate("RAGE", "Aimbot", "Target selection", ui.new_combobox, "Cycle", "Cycle (2x)", "Near crosshair", "Highest damage", "Lowest ping", "Best K/D ratio", "Best hit chance")
-	duplicate("RAGE", "Aimbot", "Target hitbox", ui.new_multiselect, "Head", "Chest", "Stomach", "Arms", "Legs", "Feet")
-	duplicate("RAGE", "Aimbot", "Avoid limbs if moving", ui.new_checkbox)
-	duplicate("RAGE", "Aimbot", "Avoid head if jumping", ui.new_checkbox)
-	duplicate("RAGE", "Aimbot", "Multi-point", ui.new_multiselect, "Head", "Chest", "Stomach", "Arms", "Legs", "Feet")
-	duplicate("RAGE", "Aimbot", "Multi-point scale", ui.new_slider, 24, 100, 24, true, "%", 1, multipoint_override)
-	duplicate("RAGE", "Aimbot", "Dynamic multi-point", ui.new_checkbox)
-	duplicate("RAGE", "Aimbot", "Prefer safe point", ui.new_checkbox)
-	duplicate("RAGE", "Aimbot", "Automatic fire", ui.new_checkbox)
-	duplicate("RAGE", "Aimbot", "Automatic penetration", ui.new_checkbox)
-	duplicate("RAGE", "Aimbot", "Silent aim", ui.new_checkbox)
-	duplicate("RAGE", "Aimbot", "Minimum hit chance", ui.new_slider, 0, 100, 50, true, "%", 1, hitchance_override)
-	duplicate("RAGE", "Aimbot", "Minimum damage", ui.new_slider, 0, 126, 0, true, "%", 1, mindamage_override)
-	duplicate("RAGE", "Aimbot", "Automatic scope", ui.new_checkbox)
-	duplicate("RAGE", "Aimbot", "Maximum FOV", ui.new_slider, 1, 180, 180, true, "°")
-	duplicate("RAGE", "Other", "Accuracy boost", ui.new_combobox, "Off", "Low", "Medium", "High", "Maximum")
-	duplicate("RAGE", "Other", "Accuracy boost options", ui.new_multiselect, "Refine shot", "Extended backtrack")
+    duplicate("RAGE", "Aimbot", "Target hitbox", ui.new_multiselect, "Head", "Chest", "Stomach", "Arms", "Legs", "Feet")
+    duplicate("RAGE", "Aimbot", "Avoid limbs if moving", ui.new_checkbox)
+    duplicate("RAGE", "Aimbot", "Avoid head if jumping", ui.new_checkbox)
+    duplicate("RAGE", "Aimbot", "Multi-point", ui.new_multiselect, "Head", "Chest", "Stomach", "Arms", "Legs", "Feet")
+    duplicate("RAGE", "Aimbot", "Multi-point scale", ui.new_slider, 24, 100, 24, true, "%", 1, multipoint_override)
+    duplicate("RAGE", "Aimbot", "Dynamic multi-point", ui.new_checkbox)
+    duplicate("RAGE", "Aimbot", "Prefer safe point", ui.new_checkbox)
+    duplicate("RAGE", "Aimbot", "Automatic fire", ui.new_checkbox)
+    duplicate("RAGE", "Aimbot", "Automatic penetration", ui.new_checkbox)
+    duplicate("RAGE", "Aimbot", "Silent aim", ui.new_checkbox)
+    duplicate("RAGE", "Aimbot", "Minimum hit chance", ui.new_slider, 0, 100, 50, true, "%", 1, hitchance_override)
+    duplicate("RAGE", "Aimbot", "Minimum damage", ui.new_slider, 0, 126, 0, true, "%", 1, mindamage_override)
+    duplicate("RAGE", "Aimbot", "Automatic scope", ui.new_checkbox)
+    duplicate("RAGE", "Aimbot", "Maximum FOV", ui.new_slider, 1, 180, 180, true, "°")
+    duplicate("RAGE", "Other", "Accuracy boost", ui.new_combobox, "Off", "Low", "Medium", "High", "Maximum")
     duplicate("RAGE", "Other", "Quick stop", ui.new_checkbox)
     duplicate("RAGE", "Other", "Quick stop options", ui.new_multiselect, "Early", "Slow motion", "Duck", "Move between shots", "Ignore molotov")
-	duplicate("RAGE", "Other", "Prefer body aim", ui.new_checkbox)
-	duplicate("RAGE", "Other", "Prefer body aim disablers", ui.new_multiselect, "Low inaccuracy", "Target shot fired", "Target resolved", "Safe point headshot", "Low damage")
+    duplicate("RAGE", "Other", "Prefer body aim", ui.new_checkbox)
+    duplicate("RAGE", "Other", "Prefer body aim disablers", ui.new_multiselect, "Low inaccuracy", "Target shot fired", "Target resolved", "Safe point headshot", "Low damage")
     duplicate("RAGE", "Other", "Delay shot on peek", ui.new_checkbox)
-    
+
     ui.set_callback(config_ref, on_weapon_config_selected)
-	ui.set_callback(enable_ref, on_adaptive_config_toggled)
-    
+    ui.set_callback(enable_ref, on_adaptive_config_toggled)
+
     temp_task()
-	on_adaptive_config_toggled(enable_ref)
+    on_adaptive_config_toggled(enable_ref)
 end
 
 init()
