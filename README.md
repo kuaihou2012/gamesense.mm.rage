@@ -9,14 +9,16 @@ lua2：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaih
 
 lua3 ：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/Override%20Damage.lua
 
+lua4：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/quick_peek.lua
+
 -------------------------------------------------------------------------------------------
 on Hotkey：
 
 M4:safe point
 
-M5:Double tap
+M3:Double tap
 
-M3:min damage =8
+M5:quick_peek
 
 caps：fake duck
 
@@ -25,3 +27,5 @@ toggle:
 C:body aim
 
 Z：freestanding
+
+V:min damage =8
