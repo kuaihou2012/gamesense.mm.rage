@@ -12,9 +12,11 @@ lua3 ：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuai
 lua4：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/quick_peek.lua
 
 lua5:https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/Custom%20AA.lua
--------------------------------------------------------------------------------------------
-on Hotkey：
 
+-------------------------------------------------------------------------------------------
+
+on Hotkey：
+---
 M4:safe point
 
 M3:Double tap
@@ -24,7 +26,7 @@ M5:quick_peek
 caps：fake duck
 
 toggle:
-
+---
 C:body aim
 
 Z：freestanding
