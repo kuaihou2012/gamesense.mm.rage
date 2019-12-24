@@ -13,7 +13,6 @@ lua3 ：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuai
 
 lua4：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/quick_peek.lua
 
-lua5:https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/Custom%20AA.lua
 
 -------------------------------------------------------------------------------------------
 
