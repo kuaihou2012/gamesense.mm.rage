@@ -25,13 +25,13 @@ caps：fake duck
 
 toggle:
 ---
-C:body aim
+C: body aim
 
 Z：freestanding
 
 V: min damage =8
 
-M4:safe point
+M4: safe point
 
 反馈
 --
