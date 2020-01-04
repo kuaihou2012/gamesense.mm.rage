@@ -33,3 +33,7 @@ C:body aim
 Z：freestanding
 
 V:min damage =8
+
+反馈
+--
+https://github.com/kuaihou2012/gamesense.mm.rage/issues
