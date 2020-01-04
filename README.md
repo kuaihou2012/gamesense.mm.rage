@@ -19,8 +19,6 @@ lua4：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaih
 on Hotkey：
 ---
 
-M3:Double tap
-
 M5:quick_peek
 
 caps：fake duck
