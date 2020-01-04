@@ -33,6 +33,10 @@ V: min damage =8
 
 M4: safe point
 
+更新日志
+--
+https://github.com/kuaihou2012/gamesense.mm.rage/releases
+
 反馈
 --
 https://github.com/kuaihou2012/gamesense.mm.rage/issues
