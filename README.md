@@ -18,7 +18,6 @@ lua4：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaih
 
 on Hotkey：
 ---
-M4:safe point
 
 M3:Double tap
 
@@ -32,7 +31,9 @@ C:body aim
 
 Z：freestanding
 
-V:min damage =8
+V: min damage =8
+
+M4:safe point
 
 反馈
 --
