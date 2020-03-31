@@ -1,5 +1,11 @@
 # gamesense.mm.rage
 
+
+参数解密
+
+http://tool.chinaz.com/tools/textencrypt.aspx
+
+
 download：
 ---
 
