@@ -1,7 +1,7 @@
 # gamesense.mm.rage
 
-
-参数解密
+参数不再公开
+需解密↓
 
 http://tool.chinaz.com/tools/textencrypt.aspx
 
