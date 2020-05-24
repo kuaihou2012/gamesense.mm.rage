@@ -11,13 +11,10 @@ download：
 
 CFG:https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/cfg
 
-lua1：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/adaptive_weapon_config.lua
+lua1：https://gamesense.pub/forums/viewtopic.php?id=14784
 
-lua2：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/indicators.lua
+lua2：https://gamesense.pub/forums/viewtopic.php?id=18912
 
-lua3 ：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/Override%20Damage.lua
-
-lua4：https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kuaihou2012/gamesense.mm.rage/blob/master/quick_peek.lua
 
 
 -------------------------------------------------------------------------------------------
