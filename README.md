@@ -32,7 +32,7 @@ C: body aim
 
 Z：freestanding
 
-V: min damage =8
+M3: min damage
 
 M4: safe point
 
