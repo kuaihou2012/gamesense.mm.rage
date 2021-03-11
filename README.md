@@ -22,7 +22,7 @@ lua4：https://gamesense.pub/forums/viewtopic.php?id=27115
 
 on Hotkey：
 ---
-M5：quick peek
+M5：quick peek / off Dormant aimbot
 
 caps：fake duck
 
