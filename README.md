@@ -6,7 +6,7 @@ download：2021.3.11
 ---
 https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/cfg
 
-
+-
 
 lua1：https://gamesense.pub/forums/viewtopic.php?id=14784
 
