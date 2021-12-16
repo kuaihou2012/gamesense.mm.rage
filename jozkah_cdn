@@ -2,5 +2,5 @@
     "name": "Jozkah_CDN",
     "description": "discord.gg/juicewrld", 
     "update_timestamp": 1637150778,
-    "url_format": "https://raw.githubusercontent.com/Jozkah/grenade-helper/main/maps/%map%.json"
+    "url_format": "https://cdn.jsdelivr.net/gh/Jozkah/grenade-helper@main/maps/%map%.json"
 }
