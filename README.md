@@ -28,7 +28,7 @@ lua7:https://jsd.cdn.zzko.cn/gh/Mixologist6105/MixoCSGO-project@CSGO-project/LBY
 
 on Hotkey：
 ---
-M5：quick peek + off Dormant aimbot + freestanding
+M5：quick peek + off Dormant aimbot + freestanding + double tap【关联lua6】
 
 caps：fake duck
 
@@ -39,8 +39,8 @@ C: body aim
 
 Z：freestanding
 
-M3: min damage
+M3: min damage【关联lua2】
 
 M4: safe point
 
-ALT:AA方向
+ALT:AA方向 【关联lua7】
