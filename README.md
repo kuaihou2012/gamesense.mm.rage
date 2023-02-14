@@ -43,4 +43,4 @@ M3: min damage【关联lua2】
 
 M4: safe point
 
-ALT:AA方向 【关联lua7】
+ALT:AA方向 【关联lua5、lua7】
