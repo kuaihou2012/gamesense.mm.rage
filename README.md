@@ -28,7 +28,7 @@ lua7:https://jsd.cdn.zzko.cn/gh/Mixologist6105/MixoCSGO-project@CSGO-project/LBY
 
 on Hotkey：
 ---
-M5：quick peek / off Dormant aimbot
+M5：quick peek + off Dormant aimbot + freestanding
 
 caps：fake duck
 
