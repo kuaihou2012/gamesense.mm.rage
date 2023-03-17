@@ -12,15 +12,14 @@ https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/cfg
 
 
 
-lua1：https://gamesense.pub/forums/viewtopic.php?id=18912 
 
-lua2：https://gamesense.pub/forums/viewtopic.php?id=6683 
+lua1：https://gamesense.pub/forums/viewtopic.php?id=6683 
 
-lua3：https://gamesense.pub/forums/viewtopic.php?id=27115 
+lua2：https://gamesense.pub/forums/viewtopic.php?id=27115 
 
-lua4：https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/aabuilder.lua 
+lua3：https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/aabuilder.lua 
 
-lua5:https://jsd.cdn.zzko.cn/gh/Mixologist6105/MixoCSGO-project@CSGO-project/LBY%20Breaker%20for%20GS.lua 
+lua4:https://jsd.cdn.zzko.cn/gh/Mixologist6105/MixoCSGO-project@CSGO-project/LBY%20Breaker%20for%20GS.lua 
 
 
 on Hotkey：
