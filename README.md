@@ -21,14 +21,13 @@ lua4：https://gamesense.pub/forums/viewtopic.php?id=27115
 
 lua5：https://jsd.cdn.zzko.cn/gh/Infinity1G/lua@main/gamesense/aabuilder.lua 
 
-lua6：https://cdn.discordapp.com/attachments/399443531560648714/1067422784663343104/ideal_quickpeek.lua 
 
-lua7:https://jsd.cdn.zzko.cn/gh/Mixologist6105/MixoCSGO-project@CSGO-project/LBY%20Breaker%20for%20GS.lua 
+lua6:https://jsd.cdn.zzko.cn/gh/Mixologist6105/MixoCSGO-project@CSGO-project/LBY%20Breaker%20for%20GS.lua 
 
 
 on Hotkey：
 ---
-M5：quick peek + off Dormant aimbot + freestanding + double tap
+M5：quick peek + off Dormant aimbot + double tap
 
 caps：fake duck
 
