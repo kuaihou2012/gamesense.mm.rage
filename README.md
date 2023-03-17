@@ -19,8 +19,7 @@ lua3：https://gamesense.pub/forums/viewtopic.php?id=6683
 
 lua4：https://gamesense.pub/forums/viewtopic.php?id=27115 
 
-lua5：https://jsd.cdn.zzko.cn/gh/Infinity1G/lua@main/gamesense/aabuilder.lua 
-
+lua5：https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/aabuilder.lua 
 
 lua6:https://jsd.cdn.zzko.cn/gh/Mixologist6105/MixoCSGO-project@CSGO-project/LBY%20Breaker%20for%20GS.lua 
 
