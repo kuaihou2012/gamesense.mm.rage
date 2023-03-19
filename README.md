@@ -2,7 +2,7 @@
 
 
 
-download：2023.3.18
+download：2023.3.19
 ---
 https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/cfg
 
