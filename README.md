@@ -39,4 +39,4 @@ M3: min damage
 
 M4: safe point
 
-ALT:AA方向
+ALT:AA←→
