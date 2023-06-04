@@ -24,12 +24,13 @@ lua4：https://raw.githubusercontent.com/kuaihou2012/gamesense-Lua/main/LBY%20Br
 
 on Hotkey：
 ---
-M5：quick peek + off Dormant aimbot + double tap
+M5：quick peek + off Dormant aimbot 
 
 caps：fake duck
 
 toggle:
 ---
+F: double tap
 
 C: body aim
 
