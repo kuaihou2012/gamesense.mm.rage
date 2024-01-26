@@ -19,6 +19,7 @@ https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/cfg
 on Hotkey：
 ---
 M5：quick peek 
+
 M3: body aim
 
 
