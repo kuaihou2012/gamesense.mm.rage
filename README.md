@@ -26,7 +26,6 @@ M3: body aim
 toggle:
 ---
 
-Z：freestanding
 
 M3: min damage
 
