@@ -1,6 +1,7 @@
 # gamesense.mm.rage
 
-
+antiaim disabled
+nospread disabled
 
 download：2024.2.4
 ---
@@ -25,7 +26,6 @@ M3: body aim
 
 toggle:
 ---
-
 
 M3: min damage
 
