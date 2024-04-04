@@ -2,7 +2,7 @@
 
 
 
-download：2024.2.4
+download：2024.4.4
 ---
 https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/cfg
 
@@ -26,4 +26,4 @@ toggle:
 
 M3: min damage（鼠标滚轮Mouse 3切换最小伤害）
 
-
+Z: Mouse override
