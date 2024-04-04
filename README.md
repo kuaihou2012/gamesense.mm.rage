@@ -1,8 +1,6 @@
 # gamesense.mm.rage
 
-antiaim disabled（AA默认关闭，可自行开启）
 
-nospread disabled（无扩散默认关闭，可自行开启）
 
 download：2024.2.4
 ---
