@@ -18,7 +18,7 @@ https://raw.githubusercontent.com/kuaihou2012/gamesense.mm.rage/master/cfg
 
 on Hotkey：
 ---
-M5：quick peek +freestanding（按住侧键Mouse 5开启快速peek+侧身藏头）
+M5：quick peek 
 
 
 toggle:
